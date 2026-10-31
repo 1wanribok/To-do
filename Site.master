@@ -1,0 +1,34 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Project Board</title>
+    <link href="Styles/site.css" rel="stylesheet" />
+</head>
+<body>
+<form id="form1" runat="server">
+    <header class="topbar">
+        <div class="wrap">
+            <div class="brand">Team Project Board</div>
+            <nav id="nav" runat="server">
+                <asp:HyperLink runat="server" NavigateUrl="~/Default.aspx"  Text="Dashboard" />
+                <asp:HyperLink runat="server" NavigateUrl="~/Board.aspx"    Text="Board" />
+                <asp:HyperLink runat="server" NavigateUrl="~/Projects.aspx" Text="Projects" />
+                <asp:HyperLink runat="server" NavigateUrl="~/Team.aspx"     Text="Team" />
+                <asp:HyperLink runat="server" NavigateUrl="~/Report.aspx"   Text="Report" />
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </main>
+
+    <footer class="wrap footer">
+        &copy; <asp:Label ID="lblYear" runat="server" /> Team Project Board &middot; Today is <asp:Label ID="lblToday" runat="server" />
+    </footer>
+</form>
+</body>
+</html>
